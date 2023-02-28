@@ -25,23 +25,31 @@
       p {
         text-align: center;
       }
+      canvas {
+        display: block;
+      }
+      img {
+        height: auto;
+        vertical-align: middle;
+      }
+      canvas,
+      img {
+        object-fit: cover;
+        max-width: 100%;
+        position: relative;
+      }
       figcaption {
-        font-size: small;
-        margin: auto;
-        max-width: 20rem;
+        margin: 0 2.25rem 0 0.75rem;
       }
       figure {
+        font-size: small;
         margin: auto;
-        width: 100%;
       }
       figure figure {
-        aspect-ratio: 542 / 361;
         display: grid;
         gap: 1px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr;
-        max-width: 33.875rem;
-        width: 100%;
       }
       span {
         background: silver;
@@ -57,16 +65,6 @@
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-      }
-      canvas,
-      img {
-        aspect-ratio: 1 / 1;
-        display: block;
-        font-size: small;
-        height: 100%;
-        object-fit: cover;
-        position: relative;
-        width: 100%;
       }
     </style>
   </head>
@@ -104,7 +102,7 @@
         </span>
       </figure>
       <figcaption>
-        <p><strong><a href="https://github.com/thewhodidthis/dither">dither.js</a></strong> Helps produce ordered or spatial (error-diffusion) dithering patterns</p>
+        <p><strong><a href="https://github.com/thewhodidthis/dither">dither.js</a></strong> Helps produce ordered or spatial dithering patterns</p>
       </figcaption>
     </figure>
   </body>
