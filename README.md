@@ -30,7 +30,7 @@ npm install thewhodidthis/dither
 
 ## usage
 
-Choose between ordered or spatial and initialize with a matrix array to get an `ImageData` processing function. For example,
+Choose between ordered or spatial and initialize with a matrix array to get an `ImageData` processing function. For example:
 
 ```js
 import { spatial as bender } from "@thewhodidthis/dither"
