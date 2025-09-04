@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Helps produce common dithering patterns.">
+    <title>dither.js</title>
+    <script src="example.js" defer></script>
+    <style>
+      html {
+        font: medium/normal sans-serif;
+        height: 100%;
+      }
+      body {
+        display: grid;
+        margin: 0;
+        min-height: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      p {
+        text-align: center;
+      }
+      canvas {
+        display: block;
+      }
+      img {
+        height: auto;
+        vertical-align: middle;
+      }
+      canvas,
+      img {
+        max-width: 100%;
+        object-fit: cover;
+        position: relative;
+      }
+      figcaption {
+        margin: 0 2.25rem 0 0.75rem;
+      }
+      figure {
+        font-size: small;
+        margin: auto;
+      }
+      figure figure {
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+      }
+      span {
+        background: silver;
+        position: relative;
+      }
+      span::before {
+        color: white;
+        content: attr(title);
+        font-size: small;
+        font-weight: bold;
+        left: 50%;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #1e1e1e;
+          color: #efefef;
+        }
+        a {
+          color: inherit;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Images from http://sipi.usc.edu/database/database.php -->
+    <figure>
+      <figure>
+        <span>
+          <img src="4.2.04.png" height="180" width="180" alt="Original: Lena">
+        </span>
+        <span>
+          <canvas height="180" width="180">
+            <img src="4.2.04-1.png" height="180" width="180" alt="Processed: Bayer16 (ordered)">
+          </canvas>
+        </span>
+        <span>
+          <canvas height="180" width="180">
+            <img src="4.2.04-2.png" height="180" width="180" alt="Processed: Bayer64 (ordered)">
+          </canvas>
+        </span>
+        <span>
+          <canvas height="180" width="180">
+            <img src="4.2.04-3.png" height="180" width="180" alt="Processed: Atkinson (spatial)">
+          </canvas>
+        </span>
+        <span>
+          <canvas height="180" width="180">
+            <img src="4.2.04-4.png" height="180" width="180" alt="Processed: Sierra2 (spatial)">
+          </canvas>
+        </span>
+        <span>
+          <canvas height="180" width="180">
+            <img src="4.2.04-5.png" height="180" width="180" alt="Processed: Stucki (spatial)">
+          </canvas>
+        </span>
+      </figure>
+      <figcaption>
+        <p><strong><a href="https://github.com/thewhodidthis/dither">dither.js</a></strong> Helps produce ordered or spatial dithering patterns</p>
+      </figcaption>
+    </figure>
+  </body>
+</html>
